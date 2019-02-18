@@ -1,0 +1,270 @@
+body{
+    margin: 0;
+    text-align: center;
+}
+h1{
+    margin: 0;
+    background-color: rgb(240, 130, 4);
+    color: white;
+}
+/*Klassen*/
+/*Funktionen bei der Tabelle (Löschen, Bearbeiten und Favoriten*/
+.Funktionen{
+    border: rgb(240, 130, 4) solid 0.1em;
+    background-color: rgb(240, 130, 4,0.05);
+}
+.Funktionen:hover{
+    cursor: pointer;
+    background-color: rgb(240, 130, 4,0.5);
+}
+/*Legende bei Tabelle*/
+.Legende{
+    width: 70%;
+    border: none;
+}
+
+.invisible{
+    display: none;
+}
+
+.Datenanlegendiv{
+    margin: 2%;
+    width: 45%;
+    float: left;
+    padding: 0.5%;
+    background-color: rgb(240, 130, 4);
+    border-radius: 5px;
+}
+.Breite95{
+    width:95%;
+}
+.Datenanlegendivinput{
+    width: 75%;
+}
+.Typauswaehlendiv{
+    width: 50%;
+    float: left;
+} 
+.btn{
+    width: 36%;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+    border: 0;
+    padding: 2%;
+    background-color: rgb(240, 130, 4);
+}
+.ButtonSign-in{
+    left: 40%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-color: rgb(240, 130, 4);
+}
+.Tabelle table{
+    border: black solid 0.1em;
+    margin: 1%;
+    width: 98%;
+
+}
+.Tabelle table thead{
+    font-weight: bold;
+}
+/*Sign in*/
+#Sign-in{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border:rgb(240, 130, 4) solid 0.1em;
+    border-radius: 5px;
+    text-align: left;
+    height: 14em;
+}
+#Sign-in div{
+    margin-top:1%;
+
+}
+#Sign-in h4{
+    text-align: center;
+}
+#Sign-in input{
+    border-radius: 5px;
+    border: black 0.1em solid;
+    position: fixed;
+    width: 20%;
+    right: 25%;
+}
+#Sign-in span{
+    position: relative;
+    width: 20%;
+    left: 20%;
+}
+.spanlink:hover{
+    cursor: pointer;
+    color: rgb(96, 96, 219);
+}
+/*Menu*/
+#Menuzeichen{
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    border: black solid 1.6px;
+    height: 34.2px;
+    width: 34.2px;
+    font-size: 25px;
+}
+#Menuzeichen:hover{
+    cursor: pointer;
+    background-color: rgb(0,0,0,0.4);
+}
+
+#Menu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba(240, 190, 149, 0.95);
+}
+#Menu ul{
+    margin:15%;
+    padding:0%;
+}
+#Menu li{
+    list-style-type: decimal;
+    text-align: left;
+    color:white;
+}
+#Menu li a:link, #Menu li a:visited{
+    text-decoration: none;
+    color:white;
+} 
+#Menu li a:hover {
+   color:black;
+   cursor: pointer;
+}
+#Menu h3{
+    color: black;
+    text-align: left;
+}
+#Back{
+    border: black solid 0.1em;
+    border-radius: 100%;
+    padding: 2%;
+    padding-bottom: 5%;
+    clear: left;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    height: 1em;
+    width: 1em;
+}
+#Back:hover{
+    background-color: rgb(250, 250, 250,0.5);
+    cursor: pointer;
+}
+/*Übersicht*/
+#mainuebersicht{
+    min-width: 1220px;
+}
+#UebersichtGenre li{
+    list-style-type: none;
+    float: left;
+    width: 6.4%;
+    background-color: rgb(240, 130, 4,0.5);
+    height: 2.5em;
+    border-radius: 5px;
+    margin: 0.125%;
+    margin-top: 0.25em;
+}
+#UebersichtGenre li:hover{
+    background-color: rgb(240, 130, 4,0.8);
+    cursor: pointer;
+}
+#UebersichtGenre{
+    border-radius: 5px;
+    margin: 1%;
+    padding: 0;
+    border: rgb(240, 130, 4) solid 0.1em;
+    height: 3em;
+}
+/*Suchen*/
+#mainsuchen{
+    min-width: 1100px  ;
+}
+#Datenabfrage{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border:rgb(240, 130, 4) solid 0.1em;
+    border-radius: 5px;
+}
+#Datenabfrage table{
+    border: black solid 0.1em;
+    margin: 1%;
+    width: 98%;
+
+}
+#Datenabfrage table thead{
+    font-weight: bold;
+}
+/*Favoriten*/
+#mainfavoriten{
+    min-width: 1100px;
+}
+#Favoriten{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border:rgb(240, 130, 4) solid 0.1em;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+#Favoriten h4{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    font-size: 1.3em;
+    background-color: rgb(240, 130, 4);
+    border-radius: 5px;   
+}
+
+#Favoriten h4:hover{
+    cursor: pointer;
+    background-color: rgb(240, 130, 4,0.5);
+}
+#Favoriten table{
+    border: black solid 0.1em;
+    margin: 1%;
+    width: 98%;
+}
+#Favoriten table thead{
+    font-weight: bold;
+}
+
+/*Hinzufügen*/
+#mainhinzufuegen{
+    min-width: 378.4px  ;
+}
+#Datenanlegen{  
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border:rgb(240, 130, 4) solid 0.1em;
+    border-radius: 5px;
+}
+
+#btnHinzufuegen:hover{
+    cursor: pointer;
+    border: 0.1em black solid;
+}
+/*Bearbeiten*/
+/*Löschen*/

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+    <html>
+            <head>
+                    <title>Netgoflix</title>
+                    <script type="text/javascript" src="js/jquery.js"></script>
+                    <script type="text/javascript" src="js/favoriten.js"></script>
+                    <link rel="stylesheet" href="style.css"/>
+                </head>
+                <body>
+                    <header>
+                        <div class="Navigationsleiste">
+                            <nav>
+                                <div id="Menuzeichen" onclick="Menuanzeigen()">&#9776</div>
+                                <div id="Menu" class="invisible">
+                                    <ul>
+                                        <span id="Back" onclick="Menuschliessen()">&#10095</span>
+                                        <h3>Menu</h3>
+                                        <li><a href="uebersicht.html">Übersicht</a></li>
+                                        <li><a href="suchen.html">Film/Serie suchen</a></li>
+                                        <li><a href="favoriten.html">Favoriten</a></li>
+                                        <li><a href="hinzufuegen.html">Film/Serie hinzufügen</a></li>
+                                        <li><a onclick="Abmelden()">Abmelden</a></li>
+                                    </ul>
+                                    <a></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </header>
+            <main id="mainfavoriten">
+                <h1>Netgoflix</h1>
+                <div id="Sign-in">
+                    <div id="Registrieren" class="invisible">
+                        <h4>Registrieren</h4>
+                        <div>
+                            <span>E-mail:</span>
+                            <input type="text" id="tbxemailreg" >
+                        </div>
+                        <div>
+                           <span>Passwort:</span>
+                            <input type="password" id="tbxpasswortreg">
+                        </div>
+                        <div>
+                            <span>Passwort wiederholen:</span>
+                            <input type="password" id="tbxpasswortwiederholungreg">
+                        </div>
+                        <div>
+                            <span>Siehe haben schon ein Konto?</span>
+                            <span onclick="WechselnzuAnmelden()" class="spanlink">Anmelden</span>
+                        </div>
+                        <div>
+                            <input type="button" id="buttonreg" class="ButtonSign-in" value="Registrieren" onclick="Registrieren()">
+                        </div> 
+                    </div>
+                    <div id="Anmelden">
+                        <h4>Anmelden</h4>
+                        <div>
+                           <span>E-mail:</span>
+                            <input type="text" id="tbxemailanm" >
+                        </div>
+                        <div>
+                            <span>Passwort:</span>
+                            <input type="password" id="tbxpasswortanm">
+                        </div>
+                        <div>
+                            <span>Siehe haben noch kein Konto?</span>
+                            <span onclick="WechselnzuRegistrieren()" class="spanlink">Registrieren</span>
+                        </div>
+                        <div>
+                            <input type="button" class = "ButtonSign-in" id="buttonanm"  value="Anmelden" onclick="Anmelden()"> 
+                        </div>
+                    </div>
+                </div>
+                <div id="Inhalt" class="invisible">
+                <div id="Favoriten">
+                    <h3>Favoriten</h3>
+                    <div id="Filme" class="FilmSerieauswahl">
+                            <h4 onclick="Filmausgewaehlt()">Filme</h4>
+                        </div>
+                            <table id="FilmeTabelle"class="invisible">
+                                <thead>
+                                    <td>Titel</td>
+                                    <td>Erscheinungsjahr</td>
+                                    <td>Genre</td>
+                                    <td id="tddauer">Dauer</td>
+                                    <td id="tdFolgenoderTeile">Teile</td>
+                                    <td>Beschreibung</td>
+                                    <td>Ersteller</td>
+                                    <td>Favorit entfernen</td>
+                                </thead>
+                                <tbody id="tbodyDatenabfragenFilmFavoriten">
+                                </tbody>
+                                <tfoot>
+                                    <td colspan="8"class="Legende">Legende: &#10060 = von Favoriten entfernen</td>
+                                </tfoot>
+                        </table>
+                    <div id="Serien"class="FilmSerieauswahl">
+                            <h4 onclick="Serieausgewaehlt()">Serien</h4>
+                    </div>
+                            <table id=SerienTabelle class="invisible">
+                                <thead>
+                                    <td>Titel</td>
+                                    <td>Erscheinungsjahr</td>
+                                    <td>Genre</td>
+                                    <td id="tddauer">Dauer</td>
+                                    <td id="tdFolgenoderTeile">Folgen</td>
+                                    <td>Beschreibung</td>
+                                    <td>Ersteller</td>
+                                    <td id="tdStaffeln">Staffeln</td>
+                                    <td>Favorit entfernen</td>
+                                </thead>
+                                <tbody id="tbodyDatenabfragenSerienFavoriten">
+                                </tbody>
+                                <tfoot>
+                                    <td colspan="9" class="Legende">Legende: &#10060 = von Favoriten entfernen</td>
+                                </tfoot>
+                        </table>
+                    </div>
+            </div>
+        </main>  
+            <footer>
+            </footer>
+        </body>
+    </html>

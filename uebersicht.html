@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+    <html>
+            <head>
+                    <title>Netgoflix</title>
+                    <script type="text/javascript" src="js/jquery.js"></script>
+                    <script type="text/javascript" src="js/uebersicht.js"></script>
+                    <link rel="stylesheet" href="style.css"/>
+                </head>
+                <body>
+                    <header>
+                        <div class="Navigationsleiste">
+                            <nav>
+                                <div id="Menuzeichen" onclick="Menuanzeigen()">&#9776</div>
+                                <div id="Menu" class="invisible">
+                                    <ul>
+                                        <span id="Back" onclick="Menuschliessen()">&#10095</span>
+                                        <h3>Menu</h3>
+                                        <li><a href="uebersicht.html">Übersicht</a></li>
+                                        <li><a href="suchen.html">Film/Serie suchen</a></li>
+                                        <li><a href="favoriten.html">Favoriten</a></li>
+                                        <li><a href="hinzufuegen.html">Film/Serie hinzufügen</a></li>
+                                        <li><a onclick="Abmelden()">Abmelden</a></li>
+                                    </ul>
+                                    <a></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </header>
+            <main id="mainuebersicht">
+                <h1>Netgoflix</h1>
+                <div id="Sign-in">
+                    <div id="Registrieren" class="invisible">
+                        <h4>Registrieren</h4>
+                        <div>
+                            <span>E-mail:</span>
+                            <input type="text" id="tbxemailreg" >
+                        </div>
+                        <div>
+                           <span>Passwort:</span>
+                            <input type="password" id="tbxpasswortreg">
+                        </div>
+                        <div>
+                            <span>Passwort wiederholen:</span>
+                            <input type="password" id="tbxpasswortwiederholungreg">
+                        </div>
+                        <div>
+                            <span>Siehe haben schon ein Konto?</span>
+                            <span onclick="WechselnzuAnmelden()"class="spanlink">Anmelden</span>
+                        </div>
+                        <div>
+                            <input type="button" id="buttonreg" class="ButtonSign-in" value="Registrieren" onclick="Registrieren()">
+                        </div> 
+                    </div>
+                    <div id="Anmelden">
+                        <h4>Anmelden</h4>
+                        <div>
+                           <span>E-mail:</span>
+                            <input type="text" id="tbxemailanm" >
+                        </div>
+                        <div>
+                            <span>Passwort:</span>
+                            <input type="password" id="tbxpasswortanm">
+                        </div>
+                        <div>
+                            <span>Siehe haben noch kein Konto?</span>
+                            <span onclick="WechselnzuRegistrieren()"class="spanlink">Registrieren</span>
+                        </div>
+                        <div>
+                            <input type="button" class = "ButtonSign-in" id="buttonanm"  value="Anmelden" onclick="Anmelden()"> 
+                        </div>
+                    </div>
+                </div>
+                <div id="Inhalt" class="invisible">
+                <div id="Uebersicht">
+                        <h3>Übersicht</h3>
+                    <div>
+                        <ul id="UebersichtGenre">
+                                <li onclick="DatennachGenre('Abenteuer')">Abenteuer</li>
+                                <li onclick="DatennachGenre('Action')">Action</li>
+                                <li onclick="DatennachGenre('Drama')">Drama</li>
+                                <li onclick="DatennachGenre('Fantasy')">Fantasy</li>
+                                <li onclick="DatennachGenre('Biographie')">Biographie</li>
+                                <li onclick="DatennachGenre('Komödie')">Komödie</li>
+                                <li onclick="DatennachGenre('Horror')">Horror</li>
+                                <li onclick="DatennachGenre('Krieg')">Krieg</li>
+                                <li onclick="DatennachGenre('Material-Arts')">Material-Arts</li>
+                                <li onclick="DatennachGenre('Musik')">Musik</li>
+                                <li onclick="DatennachGenre('Roadmovie')">Roadmovie</li>
+                                <li onclick="DatennachGenre('Science-Fiction')">Science-Fiction</li>
+                                <li onclick="DatennachGenre('Sport')">Sport</li>
+                                <li onclick="DatennachGenre('Thriller')">Thriller</li>
+                                <li onclick="DatennachGenre('Western')">Western</li>
+                        </ul>
+                    </div>
+                </div>
+                <h4 id="Hinweis1">Bitte ein Genre auswählen!</h4>
+                <diV id ="divTabellen"class="Tabelle invisible">
+                    <h4>Filme</h4>
+                    <table id="FilmeTabelle">
+                        <thead>
+                            <td>Titel</td>
+                            <td>Erscheinungsjahr</td>
+                            <td>Dauer</td>
+                            <td>Teile</td>
+                            <td>Beschreibung</td>
+                            <td>Ersteller</td>
+                        </thead>
+                        <tbody id="tbodyDatenabfragenFilmFavoriten">
+                        </tbody>
+                </table>
+                <h4>Serien</h4>
+                <table id="SerienTabelle">
+                    <thead>
+                        <td>Titel</td>
+                        <td>Erscheinungsjahr</td>
+                        <td>Dauer</td>
+                        <td>Folgen</td>
+                        <td>Beschreibung</td>
+                        <td>Ersteller</td>
+                        <td>Staffeln</td>
+                    </thead>
+                    <tbody id="tbodyDatenabfragenSerienFavoriten">
+                    </tbody>
+                </table>
+                </diV>
+            </div>
+        </main>  
+            <footer>
+            </footer>
+        </body>
+    </html>

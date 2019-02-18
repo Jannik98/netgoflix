@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+    <html>
+            <head>
+                    <title>Netgoflix</title>
+                    <script type="text/javascript" src="js/jquery.js"></script>
+                    <script type="text/javascript" src="js/hinzufuegen.js"></script>
+                    <link rel="stylesheet" href="style.css"/>
+                </head>
+                <body>
+                    <header>
+                        <div class="Navigationsleiste">
+                            <nav>
+                                <div id="Menuzeichen" onclick="Menuanzeigen()">&#9776</div>
+                                <div id="Menu" class="invisible">
+                                    <ul>
+                                        <span id="Back" onclick="Menuschliessen()">&#10095</span>
+                                        <h3>Menu</h3>
+                                        <li><a href="uebersicht.html">Übersicht</a></li>
+                                        <li><a href="suchen.html">Film/Serie suchen</a></li>
+                                        <li><a href="favoriten.html">Favoriten</a></li>
+                                        <li><a href="hinzufuegen.html">Film/Serie hinzufügen</a></li>
+                                        <li><a onclick="Abmelden()">Abmelden</a></li>
+                                    </ul>
+                                    <a></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </header>
+            <main id="mainhinzufuegen">
+                <h1>Netgoflix</h1>
+                <div id="Sign-in">
+                    <div id="Registrieren" class="invisible">
+                        <h4>Registrieren</h4>
+                        <div>
+                            <span>E-mail:</span>
+                            <input type="text" id="tbxemailreg" >
+                        </div>
+                        <div>
+                           <span>Passwort:</span>
+                            <input type="password" id="tbxpasswortreg">
+                        </div>
+                        <div>
+                            <span>Passwort wiederholen:</span>
+                            <input type="password" id="tbxpasswortwiederholungreg">
+                        </div>
+                        <div>
+                            <span>Siehe haben schon ein Konto?</span>
+                            <span onclick="WechselnzuAnmelden()"class="spanlink">Anmelden</span>
+                        </div>
+                        <div>
+                            <input type="button" id="buttonreg" class="ButtonSign-in" value="Registrieren" onclick="Registrieren()">
+                        </div> 
+                    </div>
+                    <div id="Anmelden">
+                        <h4>Anmelden</h4>
+                        <div>
+                           <span>E-mail:</span>
+                            <input type="text" id="tbxemailanm" >
+                        </div>
+                        <div>
+                            <span>Passwort:</span>
+                            <input type="password" id="tbxpasswortanm">
+                        </div>
+                        <div>
+                            <span>Siehe haben noch kein Konto?</span>
+                            <span onclick="WechselnzuRegistrieren()"class="spanlink">Registrieren</span>
+                        </div>
+                        <div>
+                            <input type="button" class = "ButtonSign-in" id="buttonanm"  value="Anmelden" onclick="Anmelden()"> 
+                        </div>
+                    </div>
+                </div>
+                <div id="Inhalt" class="invisible">
+                <div id="Datenanlegen">
+                    <h3>Film/Serie hinzufügen</h3>
+                    <div id="Typauswaehlen" class="Datenanlegendiv Breite95">
+                        <div class="Typauswaehlendiv">
+                            <p>Film</p>
+                            <input type="radio"  name="Typ" id="radFilm"onclick="Filmausgewaehlt()" value="Film" checked/>
+                        </div>
+                        <div class="Typauswaehlendiv">
+                            <p>Serie</p>
+                           <input type="radio"  name="Typ" id="radSerie"onclick="Serieausgewaehlt()" value="Serie"/>
+                        </div>
+                    </div>
+                    <div id="Titel" class="Datenanlegendiv">
+                        <p>Titel</p>
+                        <input class="Datenanlegendivinput" type="text" id="tbxTitel">
+                    </div>
+                    <div id="Beschreibung" class="Datenanlegendiv">
+                        <p>Beschreibung</p>
+                        <input class="Datenanlegendivinput" type="text" id="tbxBeschreibung">
+                    </div>
+                    <div id="Erscheinungsjahr" class="Datenanlegendiv">
+                        <p>Erscheinungsjahr</p>
+                        <input class="Datenanlegendivinput" type="number" min="1850" max="2019" id="tbxErscheinungsjahr" value="2019">
+                    </div>
+                    <div id="Genre" class="Datenanlegendiv">
+                        <p>Genre</p>
+                        <input class="Datenanlegendivinput" type="text" list="ListeGenre" id="tbxGenre">
+                        <datalist id="ListeGenre">
+                            <option>Abenteuer</option>
+                            <option>Action</option>
+                            <option>Drama</option>
+                            <option>Fantasy</option>
+                            <option>Biographie</option>
+                            <option>Komödie</option>
+                            <option>Horror</option>
+                            <option>Krieg</option>
+                            <option>Material-Arts</option>
+                            <option>Musik</option>
+                            <option>Roadmovie</option>
+                            <option>Science-Fiction</option>
+                            <option>Sport</option>
+                            <option>Thriller</option>
+                            <option>Western</option>
+                        </datalist>
+                    </input>
+                    </div>
+                    <div id="Dauer"class="Datenanlegendiv">
+                        <p id="beschriftungDauer">Dauer des Films in Minuten</p>
+                        <input class="Datenanlegendivinput" type="number" id="tbxDauer" min="1" value="1">
+                    </div>
+                    <div id="FolgenoderTeile"class="Datenanlegendiv">
+                        <p id="beschriftungFolgenoderTeile">Teil</p>
+                        <input class="Datenanlegendivinput" type="numbeR" id="tbxFolgenoderTeile" min="1" value="1">
+                    </div>
+                    <div id="Staffel" class="invisible Datenanlegendiv Breite95">
+                            <p>Staffeln</p>
+                            <input class="Datenanlegendivinput" type="number" id="tbxStaffeln" min="1" value="1">
+                    </div>
+                    <input type="button" class="btn" id="btnHinzufuegen" value="Hinzufügen" onclick="Datensatzhinzufuegen()">
+                </div>
+            </div>
+        </main>  
+            <footer>
+            </footer>
+        </body>
+    </html>
